@@ -9,7 +9,7 @@
 
 	<body>
 		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader - TON6
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader - TON 8
 		</div>
 
 		<script type="module">
@@ -60,18 +60,26 @@
 
 						if ( child.isMesh ) {
 
+
+							// scene.traverse( function( object ) {
+							// if ( object.material ) materials.add( object.material );
+							// } );
+
+
 							// switch the material here - you'll need to take the settings from the 
 							//original material, or create your own new settings, something like:
 							
-							const oldMat = child.material;
+
+							const oldMat == child.material;
+							//console.log(oldMat.name);
 							if ( oldMat.name = "Mat2") {
 								child.material = new THREE.MeshLambertMaterial( {  
 								color: 1910E1
-							//map: oldMat.map,
-							//etc
-							} );
+								//map: oldMat.map,
+								//etc
+								} );
 
-							child.material.wireframe = true;
+								child.material.wireframe = true;
 
 							}
 								
