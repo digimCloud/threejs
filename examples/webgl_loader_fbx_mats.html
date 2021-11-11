@@ -58,25 +58,25 @@
 
 					object.traverse( function ( child ) {
 
-						if ( child.isMesh ) {
+						// if ( child.isMesh ) {
 
-							// switch the material here - you'll need to take the settings from the 
-							//original material, or create your own new settings, something like:
-							//const oldMat = child.material;
+						// 	// switch the material here - you'll need to take the settings from the 
+						// 	//original material, or create your own new settings, something like:
+						// 	//const oldMat = child.material;
 
-							child.material = new THREE.MeshLambertMaterial( {  
-							color: 0xaa00ff
+						// 	child.material = new THREE.MeshLambertMaterial( {  
+						// 	color: 0xaa00ff
 
 							
-							//map: oldMat.map,
-							//etc
-							} );
+						// 	//map: oldMat.map,
+						// 	//etc
+						// 	} );
 
-							child.material.wireframe = true;
+						// 	child.material.wireframe = true;
 
-						}
+						// }
 
-						} );
+						// } );
 
 					scene.add( object );
 
