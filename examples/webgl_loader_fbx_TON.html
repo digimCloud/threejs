@@ -9,7 +9,7 @@
 
 	<body>
 		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader - TON4
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - FBXLoader - TON5x
 		</div>
 
 		<script type="module">
@@ -55,6 +55,28 @@
 				// model
 				const loader = new FBXLoader();
 				loader.load( 'models/fbx/421-629-config2.fbx', function ( object ) {
+
+					object.traverse( function ( child ) {
+
+						if ( child.isMesh ) {
+
+							// switch the material here - you'll need to take the settings from the 
+							//original material, or create your own new settings, something like:
+							//const oldMat = child.material;
+
+							child.material = new THREE.MeshLambertMaterial( {  
+							color: 1910E1
+
+							
+							//map: oldMat.map,
+							//etc
+							} );
+
+							child.material.wireframe = true;
+
+						}
+
+						} );
 
 					scene.add( object );
 
